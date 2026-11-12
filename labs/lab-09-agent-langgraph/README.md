@@ -3,14 +3,14 @@
 **Jalon** M2 · **Durée** ≈ 24 h · **Niveau** avancé · **Livrable** `agentgate/agent-runtime/`
 
 ## Objectif
-Construire un agent qui traite un dossier de sinistre en appelant les outils MCP via la passerelle, et **s'arrête pour validation humaine** avant toute action sensible. C'est le cœur des offres « agentic AI ».
+Construire un agent qui assiste un analyste sur une alerte de conformité : il explique la correspondance, prépare l'investigation et **propose** une décision en appelant les outils MCP via la passerelle. Il **s'arrête pour validation humaine** avant toute action sensible et **ne prend jamais la décision réglementaire finale**. C'est le cœur des offres « agentic AI ».
 
 ## Prérequis
 LAB-04, LAB-06, LAB-08. Notions de graphes d'états.
 
 ## Étapes
 1. Initialiser `agent-runtime` (Python, FastAPI, **LangGraph**).
-2. Définir le graphe : `comprendre la demande` → `rechercher le contrat` → `analyser le sinistre` → `proposer une décision` → `[validation humaine]` → `exécuter`.
+2. Définir le graphe : `comprendre l'alerte` → `screening et explication` (outils `mcp-screening`) → `analyser l'historique` (outils `mcp-alerts`) → `proposer une décision` (`proposeDecision`) → `contrôle qualité` (chaque affirmation cite une source ; faits, hypothèses et recommandations sont distingués ; informations manquantes signalées) → `[validation humaine]`. La décision finale est enregistrée par un humain, pas par l'agent.
 3. Brancher les outils MCP **via la passerelle** (jamais en direct) avec le jeton de l'agent.
 4. **Validation humaine** : utiliser les points d'interruption de LangGraph ; l'agent publie une demande d'approbation (API + console), puis reprend après décision.
 5. **Persistance d'état** (checkpointer PostgreSQL) : un redémarrage du service ne perd pas les dossiers en cours.
@@ -20,6 +20,8 @@ LAB-04, LAB-06, LAB-08. Notions de graphes d'états.
 
 ## Critères d'acceptation
 - [ ] ADR-0006 rédigé (exécution durable et reprise : pourquoi un graphe avec persistance plutôt qu'un simple appel) : [gabarit](../../docs/adr/README.md)
+- [ ] ADR-0011 rédigé (séparation moteur déterministe / assistant IA : aucune décision réglementaire automatisée)
+- [ ] Aucun test ne permet à l'agent d'appeler `recordDecision` (le plan de contrôle le refuse)
 - [ ] L'action sensible n'est jamais exécutée sans approbation (test automatisé)
 - [ ] Le service redémarré reprend un dossier en attente
 - [ ] Une boucle infinie provoquée volontairement est stoppée par les limites

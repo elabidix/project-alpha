@@ -51,3 +51,4 @@ DDIA chapitre N (section), autres sources.
 | 0008 | Évaluation continue comme vérification | LAB-12 | ch. 13 |
 | 0009 | Repli, cache et cohérence du routage de modèles | LAB-13 | ch. 9 |
 | 0010 | Stratégie d'isolation multi-tenant | LAB-17 | ch. 7, 8 |
+| 0011 | Séparation moteur déterministe / assistant IA ; aucune décision réglementaire automatisée | LAB-09 | ch. 13, 14 |

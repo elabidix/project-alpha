@@ -11,7 +11,7 @@ LAB-04, LAB-06, LAB-09.
 ## Étapes
 1. Lire l'OWASP Top 10 LLM et cartographier chaque risque sur AgentGate (tableau dans `docs/threat-model.md`).
 2. **Filtrage PII** : détecter et masquer noms, IBAN, e-mails, numéros de téléphone en entrée et sortie, avec **Presidio** ; mesurer faux positifs/négatifs sur un jeu de 100 textes synthétiques.
-3. **Injection de prompt** : constituer 30 attaques (directes, indirectes via un document RAG, via une description d'outil MCP piégée) et un classifieur ou règles de détection dans la passerelle.
+3. **Injection de prompt** : constituer 30 attaques (directes, indirectes via un document RAG, via une description d'outil MCP piégée, via un commentaire d'alerte contenant une instruction) et un classifieur ou règles de détection dans la passerelle.
 4. **Principe du moindre privilège** : chaque agent n'a accès qu'aux outils de sa politique ; paramètres sensibles interdits par schéma.
 5. **Sorties** : vérifier format et contenu (pas de secret, pas d'URL arbitraire) avant exécution d'une action.
 6. **Journal de sécurité** : chaque blocage est audité avec la raison.

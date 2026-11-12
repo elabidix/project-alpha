@@ -9,7 +9,7 @@ Faire de la qualité des agents et du RAG un critère **bloquant** en CI, comme 
 LAB-08, LAB-09, LAB-10.
 
 ## Étapes
-1. Constituer des **jeux dorés** : 30 cas RAG et 20 scénarios d'agent (entrée, comportement attendu, outils attendus), versionnés dans Git.
+1. Constituer des **jeux dorés** : 30 cas RAG et 20 scénarios d'agent (entrée, comportement attendu, outils attendus), dont des cas d'explication d'alerte : l'explication est fidèle au score du moteur, aucune preuve n'est inventée, chaque affirmation cite une source, les informations manquantes sont signalées, versionnés dans Git.
 2. Choisir les métriques : exactitude, fidélité au contexte, bon choix d'outil, respect de la validation humaine, coût et latence par cas.
 3. Implémenter avec **promptfoo** ou **DeepEval** ; ajouter un **LLM-as-judge** et mesurer son accord avec vos propres notes sur 20 cas (si < 80 %, corriger le juge).
 4. Définir des **seuils** et une règle de non-régression : la pull request échoue si une métrique baisse de plus de X points.

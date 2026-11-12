@@ -16,7 +16,7 @@ Règle : l'état d'avancement ne se met **que** dans `ROADMAP.md` (cases à coch
 
 ## Positionnement visé
 
-> Je mets en production des agents IA et du RAG dans des SI Java/Spring/React exigeants (banque, assurance, industrie) : sécurité, évaluation, observabilité, coûts.
+> Je mets en production des agents IA et du RAG dans des SI Java/Spring/React exigeants (banque en priorité, assurance, industrie) : sécurité, évaluation, observabilité, coûts.
 
 ## Démarrage rapide
 

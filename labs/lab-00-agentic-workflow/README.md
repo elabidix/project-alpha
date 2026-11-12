@@ -16,6 +16,7 @@ JDK 21, Node 20+, Docker, Git, compte GitHub, accès à Claude Code et/ou GitHub
 5. Créer un workflow GitHub Actions qui compile et lance les tests.
 6. Rédiger `docs/agentic-workflow.md` (dans votre dépôt de travail) : ce qui a marché, ce qui a échoué, les garde-fous que vous gardez.
 7. Essayer une fois une méthode structurée (BMAD-METHOD) et noter votre avis.
+8. Définir dans le fichier d'instructions des **rôles** à invoquer tour à tour (architecte, développeur, QA, sécurité, relecteur), les fichiers que chaque rôle peut modifier, les commandes de validation obligatoires (build, tests, lint) et les **points d'arrêt humains** avant toute opération sensible (suppression, publication, secrets). Aucune modification n'est considérée validée sans tests exécutés et relecture.
 
 ## Critères d'acceptation
 - [ ] Le fichier d'instructions est commité et l'agent le respecte

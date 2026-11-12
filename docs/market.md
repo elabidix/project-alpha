@@ -42,6 +42,9 @@ Offres proches de votre profil : développeur agentic coding Java/React (Claude 
 | React / Angular | 47 / 23 |
 | Microservices / Kafka | 47 / 23 |
 | Outils IA de dev (Copilot, Cursor, Claude Code) | 46 |
+| Kafka / RabbitMQ | 23 / 3 |
+| Argo CD (GitOps) / Keycloak / SonarQube | 4 / 1 / 4 |
+| Secteur banque, finance ou assurance mentionné (indicatif : le mot peut apparaître hors contexte) | 51 |
 
 France (113 annonces) contre hors France (529) :
 

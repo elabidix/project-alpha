@@ -10,7 +10,7 @@ LAB-01. Une clé d'API d'un fournisseur (OpenAI, Anthropic, Mistral…) ou **Oll
 
 ## Étapes
 1. **Python** : appeler un modèle avec le SDK du fournisseur ; comparer température 0 et 1 sur 5 prompts.
-2. **Sortie structurée** : obtenir un JSON validé par un modèle Pydantic (extraction d'informations d'un sinistre fictif) ; mesurer le taux d'échec sur 20 textes.
+2. **Sortie structurée** : obtenir un JSON validé par un modèle Pydantic (extraction d'informations d'une alerte de conformité fictive) ; mesurer le taux d'échec sur 20 textes.
 3. **Appel d'outils** : définir 2 fonctions (`get_contract`, `get_weather` fictive) ; faire choisir l'outil au modèle, exécuter, renvoyer le résultat.
 4. **Streaming** : afficher la réponse token par token (SSE via FastAPI).
 5. **Java** : refaire les points 1 à 4 avec **Spring AI** (`ChatClient`, sorties structurées, `@Tool`, streaming `Flux`).

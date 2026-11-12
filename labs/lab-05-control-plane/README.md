@@ -10,7 +10,7 @@ LAB-03, LAB-04. Connaissances Spring Security et JPA.
 
 ## Étapes
 1. Structurer en **hexagonal** : `domain` (sans framework), `application` (cas d'usage), `adapters` (REST, JPA). Ajouter des tests **ArchUnit** qui interdisent les dépendances interdites.
-2. Modèle : `Tenant`, `ToolServer` (URL, transport, propriétaire), `Agent`, `Policy` (qui peut appeler quel outil), `AuditEvent`.
+2. Modèle : `Tenant`, `ToolServer` (URL, transport, propriétaire), `Agent`, `Policy` (qui peut appeler quel outil, avec un indicateur `humanApprovalRequired` pour les outils de décision), `ApprovalRequest`, `AuditEvent`.
 3. API REST versionnée (`/api/v1`) : CRUD du registre, enregistrement d'un serveur MCP, test de connectivité. Documentation **OpenAPI**.
 4. Sécurité : **Spring Authorization Server** (ou Keycloak simple pour démarrer), OAuth2 client credentials pour les agents, rôles `admin`, `operator`, `auditor`.
 5. Persistance **PostgreSQL**, migrations **Flyway**, tests avec **Testcontainers**.
@@ -22,6 +22,7 @@ LAB-03, LAB-04. Connaissances Spring Security et JPA.
 - [ ] Tests ArchUnit verts (le domaine ne dépend d'aucun framework)
 - [ ] Un client sans le bon rôle reçoit 403 ; sans jeton, 401
 - [ ] Aucune modification ni suppression possible sur `AuditEvent` via l'API
+- [ ] Un outil marqué `humanApprovalRequired` ne s'exécute qu'avec une approbation d'un utilisateur humain (rôle `operator`), jamais avec le jeton d'un agent
 - [ ] Couverture ≥ 80 % sur domaine et application
 - [ ] OpenAPI publié ; image Docker construite
 

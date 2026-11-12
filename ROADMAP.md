@@ -15,7 +15,7 @@ Hypothèses : **≈ 10 h/semaine**, démarrage **lundi 16/11/2026 (S1)**, fin **
 | Jalon | Semaines (dates) | Charge | Résultat |
 |---|---|---|---|
 | [M0 Fondations](#m0--fondations) | S1-2 (16/11 → 29/11/2026) | 20 h | Outillage agentique, Python, API LLM |
-| [M1 Walking skeleton](#m1--walking-skeleton) | S3-8 (30/11/2026 → 10/01/2027) | 60 h | AgentGate v0.1 + démo vidéo |
+| [M1 Walking skeleton](#m1--walking-skeleton) | S3-8 (30/11/2026 → 10/01/2027) | 63 h | AgentGate v0.1 + démo vidéo |
 | [M2 RAG et agents](#m2--rag-et-agents) | S9-16 (11/01 → 07/03/2027) | 80 h | v0.2 publique, premières candidatures |
 | [M3 Garde-fous et évaluation](#m3--garde-fous-et-évaluation) | S17-24 (08/03 → 02/05/2027) | 80 h | v0.5 + certification cloud IA |
 | [M4 Industrialisation](#m4--industrialisation) | S25-34 (03/05 → 11/07/2027) | 90 h | v1.0 bêta + CKAD |
@@ -61,8 +61,8 @@ Hypothèses : **≈ 10 h/semaine**, démarrage **lundi 16/11/2026 (S1)**, fin **
 **Objectif.** Un premier AgentGate bout en bout, minimal mais qui tourne avec `docker compose up` : deux outils MCP, un plan de contrôle sécurisé, une passerelle qui audite les appels, une console React.
 
 **TP**
-- [ ] [LAB-03 Serveur MCP en Java](./labs/lab-03-mcp-server-java/README.md) (8 h)
-- [ ] [LAB-04 Serveur MCP en Python](./labs/lab-04-mcp-server-python/README.md) (6 h)
+- [ ] [LAB-03 Serveur MCP en Java : screening de conformité](./labs/lab-03-mcp-server-java/README.md) (10 h)
+- [ ] [LAB-04 Serveur MCP en Python : alertes de conformité](./labs/lab-04-mcp-server-python/README.md) (7 h)
 - [ ] [LAB-05 Plan de contrôle hexagonal](./labs/lab-05-control-plane/README.md) (20 h)
 - [ ] [LAB-06 Passerelle MCP avec audit](./labs/lab-06-mcp-gateway/README.md) (14 h)
 - [ ] [LAB-07 Console React](./labs/lab-07-react-console/README.md) (12 h)
@@ -106,7 +106,7 @@ Hypothèses : **≈ 10 h/semaine**, démarrage **lundi 16/11/2026 (S1)**, fin **
 - [ ] L'agent s'interrompt pour validation humaine et reprend après approbation
 - [ ] Les traces apparaissent dans Langfuse avec coûts par appel
 - [ ] Aucun événement perdu ni effet en double après arrêt brutal et doublons injectés (LAB-18)
-- [ ] ADR-0005, 0006 et 0007 rédigés
+- [ ] ADR-0005, 0006, 0007 et 0011 rédigés
 - [ ] Article #2 publié ; tag `v0.2.0`, dépôt rendu présentable (README, schéma)
 - [ ] **5 candidatures ciblées** envoyées en citant le dépôt (offres « Java + IA », « agentic coding »)
 
@@ -168,7 +168,7 @@ Hypothèses : **≈ 10 h/semaine**, démarrage **lundi 16/11/2026 (S1)**, fin **
 - [ ] SSO (Keycloak) et isolation entre au moins deux tenants testées
 - [ ] Étude de cas legacy publiée (avant/après, mesures de gain)
 - [ ] CKAD obtenue
-- [ ] ADR-0010 rédigé ; **revue d'architecture** : relire les 10 ADR, corriger ceux que les tests ou les mesures ont contredits (noter l'écart, ne pas le cacher)
+- [ ] ADR-0010 rédigé ; **revue d'architecture** : relire les 11 ADR, corriger ceux que les tests ou les mesures ont contredits (noter l'écart, ne pas le cacher)
 - [ ] Documentation (site ou dossier `docs/`) ; tag `v1.0.0-beta`
 
 ---
@@ -190,6 +190,7 @@ Hypothèses : **≈ 10 h/semaine**, démarrage **lundi 16/11/2026 (S1)**, fin **
 - Vérifier la clause de propriété intellectuelle de vos contrats avant toute commercialisation
 
 **Definition of Done**
+- [ ] Les 6 scénarios de démonstration (A à F, voir [agentgate/README.md](./agentgate/README.md)) sont rejouables et filmés
 - [ ] 1 mission payée **ou** 3 conversations qualifiées
 - [ ] **Décision go/no-go produit** notée dans le journal : continuer comme vitrine seule, produit open-core, ou arrêt
 
@@ -227,7 +228,7 @@ Les numéros de chapitres ci-dessous viennent de la table des matières de la 2�
 
 **Livrable de lecture** (dans le journal ou un article) : un schéma « garanties d'AgentGate » : ce que le système assure en cas de panne, de doublon, de désordre, et ce qu'il n'assure pas. À produire avec LAB-18.
 
-**Du livre à la vision d'architecte** : lire ne se voit pas, décider et justifier se voit. Chaque TP clé produit donc un [ADR](./docs/adr/README.md) (choix, alternatives, compromis, preuve). À M5, les 10 ADR et le schéma des garanties deviennent un article ou un talk « Compromis d'architecture d'une plateforme d'agents IA », et la matière des entretiens de conception pour les rôles d'architecte (TJM 610 € relevé dans [docs/market.md](./docs/market.md)).
+**Du livre à la vision d'architecte** : lire ne se voit pas, décider et justifier se voit. Chaque TP clé produit donc un [ADR](./docs/adr/README.md) (choix, alternatives, compromis, preuve). À M5, les 11 ADR et le schéma des garanties deviennent un article ou un talk « Compromis d'architecture d'une plateforme d'agents IA », et la matière des entretiens de conception pour les rôles d'architecte (TJM 610 € relevé dans [docs/market.md](./docs/market.md)).
 
 **Livrable de lecture** (dans le journal ou un article) : un schéma « garanties d'AgentGate » : ce que le système assure en cas de panne, de doublon, de désordre, et ce qu'il n'assure pas.
 
@@ -246,7 +247,7 @@ Les numéros de chapitres ci-dessous viennent de la table des matières de la 2�
 | Surdimensionner le projet | Walking skeleton d'abord, règle de coupe |
 | Concurrence (LiteLLM, Langfuse, Kong, passerelles cloud) | Assumer vitrine + accélérateur de missions ; produit en option |
 | Technologies qui bougent vite (MCP, A2A, frameworks) | Isoler derrière des interfaces ; rescan marché à M3 et M6 |
-| Propriété intellectuelle | Aucun code ni donnée client ; données synthétiques |
+| Propriété intellectuelle | Aucun code ni donnée client ; données synthétiques ; ne rien reprendre de vos employeurs (le domaine de la conformité bancaire est proche de votre expérience : relire votre clause de confidentialité avant de publier) |
 | Échantillon d'offres biaisé | Recouper avec Malt/Free-Work et recruteurs |
 | Manque de temps | Allonger les jalons plutôt que bâcler l'évaluation et la sécurité |
 

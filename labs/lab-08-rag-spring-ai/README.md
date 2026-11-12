@@ -3,13 +3,13 @@
 **Jalon** M2 · **Durée** ≈ 20 h · **Niveau** avancé · **Livrable** `agentgate/rag-app/`
 
 ## Objectif
-Construire un assistant de questions-réponses sur des documents d'assurance, avec **citations des sources** et une évaluation chiffrée, en Java. Le RAG est dans 31 % des annonces Java + IA.
+Construire un assistant de questions-réponses sur des documents de conformité bancaire (procédures, politiques internes, guides d'investigation), avec **citations des sources** et une évaluation chiffrée, en Java. Il servira de base de connaissances à l'agent du [LAB-09](../lab-09-agent-langgraph/README.md). Le RAG est dans 31 % des annonces Java + IA.
 
 ## Prérequis
 LAB-02, LAB-05. PostgreSQL avec l'extension pgvector (Docker).
 
 ## Étapes
-1. Constituer un corpus **synthétique** de 30 à 50 documents (conditions générales, FAQ, procédures) ; ne jamais utiliser de documents clients.
+1. Constituer un corpus **synthétique** de 30 à 50 documents (procédures de traitement des alertes, politiques internes, guides d'investigation, FAQ) ; ne jamais utiliser de documents clients.
 2. **Ingestion** : découpage (chunking) paramétrable, métadonnées (source, page, version), embeddings, stockage pgvector ; ingestion **asynchrone via Kafka** (événement « document ajouté »).
 3. **Récupération** : recherche vectorielle, puis combinaison avec recherche plein texte (hybride) et re-classement ; comparer au moins 2 stratégies de chunking.
 4. **Génération** : prompt avec contexte, réponse avec citations (document + passage), refus de répondre si le contexte est insuffisant.
