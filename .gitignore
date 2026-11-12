@@ -1,0 +1,22 @@
+# Données brutes d'offres (contiennent des données personnelles de tiers)
+chat.md
+data/
+*.local.json
+
+# Secrets
+.env
+.env.*
+*.pem
+*.key
+
+# Build / IDE
+target/
+build/
+node_modules/
+dist/
+__pycache__/
+.venv/
+.idea/
+.vscode/
+*.log
+.DS_Store
