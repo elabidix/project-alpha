@@ -13,7 +13,7 @@ Ce dossier reste vide jusqu'au jalon **M1**. Les TP des `labs/` produisent chacu
 | Plan de contrôle | `control-plane/` | Spring Boot, hexagonal, PostgreSQL, Spring Authorization Server | [lab-05](../labs/lab-05-control-plane/README.md) |
 | Passerelle | `gateway/` | Spring Cloud Gateway | [lab-06](../labs/lab-06-mcp-gateway/README.md) |
 | Console | `console/` | React, TypeScript | [lab-07](../labs/lab-07-react-console/README.md) |
-| Application RAG | `rag-app/` | Spring AI, pgvector, Kafka | [lab-08](../labs/lab-08-rag-spring-ai/README.md) |
+| Application RAG | `rag-app/` | Spring AI, pgvector, Kafka | [lab-08](../labs/lab-08-rag-spring-ai/README.md), [lab-18](../labs/lab-18-reliable-events/README.md) |
 | Runtime d'agents | `agent-runtime/` | Python, LangGraph | [lab-09](../labs/lab-09-agent-langgraph/README.md) |
 | Évaluation | `evals/` | promptfoo / DeepEval | [lab-12](../labs/lab-12-evals-ci/README.md) |
 | Déploiement | `deploy/` | Helm, Terraform | [lab-14](../labs/lab-14-kubernetes-helm/README.md) |

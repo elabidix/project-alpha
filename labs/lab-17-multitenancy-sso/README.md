@@ -24,6 +24,7 @@ LAB-05, LAB-06, LAB-07, LAB-14.
 - [ ] SSO fonctionnel avec rôles mappés
 
 ## Ressources
+- DDIA : transactions, isolation, partitionnement (stratégie d'isolation par `tenant_id`)
 - Keycloak : <https://www.keycloak.org/documentation>
 - PostgreSQL Row Level Security : <https://www.postgresql.org/docs/current/ddl-rowsecurity.html>
 - Spring Security : <https://docs.spring.io/spring-security/reference/>

@@ -27,6 +27,7 @@ LAB-02, LAB-05. PostgreSQL avec l'extension pgvector (Docker).
 Variante en Python/LangChain sur le même corpus, pour comparer.
 
 ## Ressources
+- DDIA : données dérivées et index (l'index vectoriel est une vue dérivée à garder synchronisée), voir [LAB-18](../lab-18-reliable-events/README.md)
 - Spring AI : <https://docs.spring.io/spring-ai/reference/>
 - Ragas : <https://docs.ragas.io> · DeepEval : <https://deepeval.com>
 - Évaluer les systèmes LLM : <https://hamel.dev/blog/posts/evals/>

@@ -92,6 +92,7 @@ Hypothèses : **≈ 10 h/semaine**, démarrage **lundi 16/11/2026 (S1)**, fin **
 - [ ] [LAB-08 RAG avec Spring AI et pgvector](./labs/lab-08-rag-spring-ai/README.md) (20 h)
 - [ ] [LAB-09 Agent LangGraph avec validation humaine](./labs/lab-09-agent-langgraph/README.md) (24 h)
 - [ ] [LAB-10 Observabilité LLM (Langfuse, OpenTelemetry)](./labs/lab-10-observability/README.md) (12 h)
+- [ ] [LAB-18 Fiabilité des événements : outbox, idempotence, relecture](./labs/lab-18-reliable-events/README.md) (10 h)
 
 **Ressources**
 - LangGraph : <https://langchain-ai.github.io/langgraph/>
@@ -103,6 +104,7 @@ Hypothèses : **≈ 10 h/semaine**, démarrage **lundi 16/11/2026 (S1)**, fin **
 - [ ] L'application RAG répond avec citations et son jeu de test passe
 - [ ] L'agent s'interrompt pour validation humaine et reprend après approbation
 - [ ] Les traces apparaissent dans Langfuse avec coûts par appel
+- [ ] Aucun événement perdu ni effet en double après arrêt brutal et doublons injectés (LAB-18)
 - [ ] Article #2 publié ; tag `v0.2.0`, dépôt rendu présentable (README, schéma)
 - [ ] **5 candidatures ciblées** envoyées en citant le dépôt (offres « Java + IA », « agentic coding »)
 
@@ -199,6 +201,25 @@ Hypothèses : **≈ 10 h/semaine**, démarrage **lundi 16/11/2026 (S1)**, fin **
 - [ ] Cap choisi : freelance premium, produit, ou hybride
 
 ---
+
+## Lecture : *Designing Data-Intensive Applications* (Kleppmann, Riccomini)
+
+**Verdict : oui, utile**, surtout pour les rôles architecte/tech lead et les entretiens de conception. Le livre ne parle pas d'IA : il donne les fondations (transactions, flux d'événements, données dérivées, évolution de schéma, pannes) sur lesquelles reposent des agents et du RAG fiables. C'est ce qui vous distingue d'un profil « démo ».
+
+À vérifier sur votre exemplaire : je n'ai pas pu consulter la table des matières de la 2ᵉ édition (le site officiel affiche encore la 1ʳᵉ). Le tableau ci-dessous suit donc les thèmes, pas les numéros de chapitres.
+
+**Rythme** : ≈ 1 h par semaine, prise sur les 2 h d'apprentissage. Lire avant le TP, puis noter dans le journal une idée appliquée.
+
+| Quand | Thèmes à lire | Pourquoi dans ce projet |
+|---|---|---|
+| M0-M1 | Fiabilité, scalabilité, maintenabilité ; modèles de données ; encodage et évolution des schémas | Contrats d'API et schémas d'outils MCP versionnés ([LAB-03](./labs/lab-03-mcp-server-java/README.md), [LAB-05](./labs/lab-05-control-plane/README.md)) |
+| M1 | Stockage et index ; transactions et niveaux d'isolation | Audit insertion seule, contraintes, isolation entre tenants ([LAB-05](./labs/lab-05-control-plane/README.md), [LAB-17](./labs/lab-17-multitenancy-sso/README.md)). Comprendre l'index pgvector comme un index parmi d'autres |
+| M2 | Flux d'événements, journaux, données dérivées, traitement par lots et en flux | Un index vectoriel est une *vue dérivée* à garder synchronisée ([LAB-08](./labs/lab-08-rag-spring-ai/README.md), [LAB-18](./labs/lab-18-reliable-events/README.md)) |
+| M3 | Pannes partielles, timeouts, nouvelles tentatives, idempotence | Passerelle, repli de modèles, actions d'agents rejouables ([LAB-06](./labs/lab-06-mcp-gateway/README.md), [LAB-09](./labs/lab-09-agent-langgraph/README.md), [LAB-13](./labs/lab-13-model-routing/README.md)) |
+| M4 | Réplication, partitionnement, cohérence et consensus | Haute disponibilité Kubernetes, état des agents, PostgreSQL en production ([LAB-14](./labs/lab-14-kubernetes-helm/README.md)) |
+| M5 | Cloud natif, séparation stockage/calcul, aspects légaux et éthiques des données (selon la table de votre édition) | Discours d'architecte, conformité (AI Act, RGPD) dans les offres et audits |
+
+**Livrable de lecture** (dans le journal ou un article) : un schéma « garanties d'AgentGate » : ce que le système assure en cas de panne, de doublon, de désordre, et ce qu'il n'assure pas.
 
 ## Cette semaine
 
