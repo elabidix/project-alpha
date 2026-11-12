@@ -17,6 +17,9 @@ Ce dossier reste vide jusqu'au jalon **M1**. Les TP des `labs/` produisent chacu
 | Runtime d'agents | `agent-runtime/` | Python, LangGraph | [lab-09](../labs/lab-09-agent-langgraph/README.md) |
 | Évaluation | `evals/` | promptfoo / DeepEval | [lab-12](../labs/lab-12-evals-ci/README.md) |
 | Déploiement | `deploy/` | Helm, Terraform | [lab-14](../labs/lab-14-kubernetes-helm/README.md) |
+| Étude de cas legacy | `case-study-legacy/` | Java, Spring Batch (hors pile AgentGate) | [lab-16](../labs/lab-16-legacy-modernization/README.md) |
+
+Les mini-projets du jalon M0 (LAB-00 à 02) ne sont pas des composants d'AgentGate : ils vivent dans `exercises/` à la racine du dépôt. Détail du parcours : [labs/README.md](../labs/README.md).
 
 ## Cas d'usage de démonstration : conformité bancaire (ComplyFlow-lite)
 

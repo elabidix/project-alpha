@@ -44,15 +44,16 @@ Hypothèses : **≈ 10 h/semaine**, démarrage **lundi 16/11/2026 (S1)**, fin **
 - [ ] [LAB-02 Bases des API LLM](./labs/lab-02-llm-api-basics/README.md) (6 h)
 
 **Ressources**
-- Claude Code : <https://docs.claude.com/en/docs/claude-code/overview> · GitHub Copilot : <https://docs.github.com/copilot>
+- Claude Code : <https://code.claude.com/docs/en/overview> · GitHub Copilot : <https://docs.github.com/copilot>
+- Modèles d'instructions d'agent par techno : <https://github.com/github/awesome-copilot/tree/main/instructions> · format `AGENTS.md` : <https://agents.md>
 - *AI Engineering*, Chip Huyen (O'Reilly, 2025) : chapitres 1 à 3
 - DeepLearning.AI, cours courts : <https://www.deeplearning.ai/short-courses/>
 
 **Definition of Done**
 - [ ] CI GitHub Actions verte sur le dépôt
 - [ ] Un schéma d'architecture AgentGate (image ou Mermaid) dans `agentgate/`
-- [ ] Un fichier d'instructions d'agent (`CLAUDE.md` ou `.github/copilot-instructions.md`) commité
-- [ ] Trois mini-projets des LAB-00 à 02 dans le dépôt
+- [ ] Un fichier d'instructions d'agent (`AGENTS.md`, `CLAUDE.md` ou `.github/copilot-instructions.md`) commité, testé avec/sans et réduit à l'essentiel (voir LAB-00)
+- [ ] Trois mini-projets des LAB-00 à 02 dans `exercises/`, chacun avec sa CI
 
 ---
 
@@ -161,7 +162,7 @@ Hypothèses : **≈ 10 h/semaine**, démarrage **lundi 16/11/2026 (S1)**, fin **
 - Kubernetes : <https://kubernetes.io/docs/> · kind : <https://kind.sigs.k8s.io/> · Helm : <https://helm.sh/docs/> · simulateur d'examen : <https://killer.sh>
 - Terraform : <https://developer.hashicorp.com/terraform/tutorials>
 - Keycloak : <https://www.keycloak.org/documentation>
-- Méthode agentique spec-driven : BMAD-METHOD (rechercher « BMAD-METHOD » sur GitHub)
+- Méthode agentique spec-driven : BMAD-METHOD <https://github.com/bmad-code-org/BMAD-METHOD>
 
 **Definition of Done**
 - [ ] Installation complète via un seul chart Helm sur kind
@@ -229,8 +230,6 @@ Les numéros de chapitres ci-dessous viennent de la table des matières de la 2�
 **Livrable de lecture** (dans le journal ou un article) : un schéma « garanties d'AgentGate » : ce que le système assure en cas de panne, de doublon, de désordre, et ce qu'il n'assure pas. À produire avec LAB-18.
 
 **Du livre à la vision d'architecte** : lire ne se voit pas, décider et justifier se voit. Chaque TP clé produit donc un [ADR](./docs/adr/README.md) (choix, alternatives, compromis, preuve). À M5, les 11 ADR et le schéma des garanties deviennent un article ou un talk « Compromis d'architecture d'une plateforme d'agents IA », et la matière des entretiens de conception pour les rôles d'architecte (TJM 610 € relevé dans [docs/market.md](./docs/market.md)).
-
-**Livrable de lecture** (dans le journal ou un article) : un schéma « garanties d'AgentGate » : ce que le système assure en cas de panne, de doublon, de désordre, et ce qu'il n'assure pas.
 
 ## Cette semaine
 

@@ -7,7 +7,7 @@ Plan de 12 mois pour passer de **développeur senior Java / Spring / React** à 
 | Je veux… | Je vais voir |
 |---|---|
 | Savoir quoi faire cette semaine, cocher l'avancement | [ROADMAP.md](./ROADMAP.md) (**seul fichier de suivi**) |
-| Faire un TP (objectif, étapes, critères de réussite, ressources) | [labs/](./labs) |
+| Faire un TP (objectif, étapes, critères de réussite, ressources) | [labs/](./labs/README.md) (parcours, prérequis, conventions) |
 | Comprendre pourquoi ces choix (analyse des offres) | [docs/market.md](./docs/market.md) |
 | Consulter ou écrire une décision d'architecture | [docs/adr/](./docs/adr/README.md) |
 | Coder le projet fil rouge | [agentgate/](./agentgate) |
