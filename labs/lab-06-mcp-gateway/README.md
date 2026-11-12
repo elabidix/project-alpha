@@ -19,6 +19,7 @@ LAB-03 à LAB-05.
 8. `docker-compose.yml` qui démarre tout (plan de contrôle, passerelle, 2 serveurs MCP, PostgreSQL).
 
 ## Critères d'acceptation
+- [ ] ADR-0004 rédigé (timeouts, nouvelles tentatives, disjoncteur) avec un test de panne comme preuve : [gabarit](../../docs/adr/README.md)
 - [ ] Un agent autorisé appelle un outil via la passerelle ; un agent non autorisé est refusé et l'événement est audité
 - [ ] Le dépassement de débit renvoie 429
 - [ ] La coupure d'un serveur MCP n'entraîne pas de blocage de la passerelle (circuit ouvert)

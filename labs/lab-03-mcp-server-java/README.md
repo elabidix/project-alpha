@@ -18,6 +18,7 @@ LAB-00 à LAB-02. Lire l'introduction de MCP (outils, ressources, prompts, trans
 7. Écrire des tests d'intégration (appel d'outil via le client MCP de test) et une image Docker.
 
 ## Critères d'acceptation
+- [ ] ADR-0003 rédigé (versionnage des contrats et schémas d'outils) : [gabarit](../../docs/adr/README.md)
 - [ ] Les 3 outils sont découverts par l'Inspector et par l'assistant
 - [ ] 5 scénarios de questions réussissent ; les échecs sont documentés
 - [ ] Les entrées invalides renvoient une erreur claire, jamais une exception brute

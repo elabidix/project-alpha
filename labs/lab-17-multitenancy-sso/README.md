@@ -18,6 +18,7 @@ LAB-05, LAB-06, LAB-07, LAB-14.
 7. Documenter le modèle de menaces multi-tenant.
 
 ## Critères d'acceptation
+- [ ] ADR-0010 rédigé (stratégie d'isolation multi-tenant : colonne, schémas ou bases séparées) : [gabarit](../../docs/adr/README.md)
 - [ ] Suite de tests d'isolation verte, y compris tentatives par identifiants devinés
 - [ ] Un auditeur du tenant A ne voit aucun événement du tenant B
 - [ ] La suppression d'un tenant supprime ses données (démontré par test)

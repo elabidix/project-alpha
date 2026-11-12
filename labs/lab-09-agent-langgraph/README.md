@@ -19,6 +19,7 @@ LAB-04, LAB-06, LAB-08. Notions de graphes d'états.
 8. Comparer en une page à une variante simple « un seul appel + outils » : quand le graphe vaut-il le coût ?
 
 ## Critères d'acceptation
+- [ ] ADR-0006 rédigé (exécution durable et reprise : pourquoi un graphe avec persistance plutôt qu'un simple appel) : [gabarit](../../docs/adr/README.md)
 - [ ] L'action sensible n'est jamais exécutée sans approbation (test automatisé)
 - [ ] Le service redémarré reprend un dossier en attente
 - [ ] Une boucle infinie provoquée volontairement est stoppée par les limites

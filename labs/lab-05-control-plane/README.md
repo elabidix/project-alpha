@@ -18,6 +18,7 @@ LAB-03, LAB-04. Connaissances Spring Security et JPA.
 7. Ajouter des tests de contrat de l'API (Spring REST Docs ou tests OpenAPI) et un `Dockerfile`.
 
 ## Critères d'acceptation
+- [ ] ADR-0001 (système de référence, hexagonal) et ADR-0002 (isolation, audit en insertion seule) rédigés : [gabarit](../../docs/adr/README.md)
 - [ ] Tests ArchUnit verts (le domaine ne dépend d'aucun framework)
 - [ ] Un client sans le bon rôle reçoit 403 ; sans jeton, 401
 - [ ] Aucune modification ni suppression possible sur `AuditEvent` via l'API

@@ -19,6 +19,7 @@ LAB-05, LAB-08 (Kafka et ingestion asynchrone). Lecture conseillée avant le TP 
 8. **Test de chaos** : tuer broker, relais et consommateur pendant une charge ; aucun événement perdu, aucun effet en double.
 
 ## Critères d'acceptation
+- [ ] ADR-0007 rédigé (outbox contre CDC, garanties de livraison) : [gabarit](../../docs/adr/README.md)
 - [ ] Après l'arrêt brutal de l'étape 1, aucun événement n'est perdu avec l'outbox (test automatisé)
 - [ ] Un événement livré 3 fois produit un seul effet
 - [ ] Le message poison finit en DLQ sans bloquer les suivants

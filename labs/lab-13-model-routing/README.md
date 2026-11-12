@@ -18,6 +18,7 @@ LAB-02, LAB-06, LAB-10.
 7. Rapport coût/qualité : 20 cas évalués avec 3 modèles (score LAB-12, coût, latence) et recommandation.
 
 ## Critères d'acceptation
+- [ ] ADR-0009 rédigé (repli, cache, cohérence du routage) avec le rapport coût/qualité comme preuve : [gabarit](../../docs/adr/README.md)
 - [ ] Une panne simulée du fournisseur principal est invisible pour l'utilisateur (repli)
 - [ ] Un tenant dépassant son quota reçoit 429 sans impacter les autres
 - [ ] Le rapport coût/qualité justifie le modèle choisi par cas d'usage

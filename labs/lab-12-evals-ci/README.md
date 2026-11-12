@@ -18,6 +18,7 @@ LAB-08, LAB-09, LAB-10.
 7. Boucle de feedback : transformer 5 erreurs réelles tracées dans Langfuse en nouveaux cas de test.
 
 ## Critères d'acceptation
+- [ ] ADR-0008 rédigé (évaluation continue comme vérification, choix des seuils) : [gabarit](../../docs/adr/README.md)
 - [ ] Une dégradation volontaire du prompt fait échouer la CI
 - [ ] Le juge a ≥ 80 % d'accord avec vos annotations
 - [ ] Les scores sont affichés dans la PR et historisés

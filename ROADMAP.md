@@ -7,7 +7,7 @@ Hypothèses : **≈ 10 h/semaine**, démarrage **lundi 16/11/2026 (S1)**, fin **
 - **Seul endroit où l'on suit l'avancement** : cocher `[x]` ici, rien ailleurs.
 - **Rituel du dimanche (20 min)** : cocher ce qui est fini, ajouter une ligne au [journal](#journal), choisir 2 à 3 tâches pour la semaine.
 - **Rythme type** : 6 h build, 2 h apprentissage/certification, 2 h visibilité (README, post, échanges).
-- **Règle de coupe** si retard : sacrifier d'abord SSO, multi-tenant, routage multi-modèles, Terraform. **Jamais** l'évaluation, la sécurité ni la démo.
+- **Règle de coupe** si retard : sacrifier d'abord SSO, multi-tenant, routage multi-modèles, Terraform. **Jamais** l'évaluation, la sécurité, la démo ni les [ADR](./docs/adr/README.md).
 - **Règle de sortie** : un jalon n'est terminé que si sa *Definition of Done* est cochée en entier.
 
 ## Vue d'ensemble
@@ -78,6 +78,7 @@ Hypothèses : **≈ 10 h/semaine**, démarrage **lundi 16/11/2026 (S1)**, fin **
 - [ ] `docker compose up` démarre toute la pile
 - [ ] Vidéo de démo de 3 minutes
 - [ ] Article #1 publié (ex. « Mon premier serveur MCP en Java »)
+- [ ] ADR-0001 à 0004 rédigés (voir [docs/adr](./docs/adr/README.md))
 - [ ] Tag Git `v0.1.0`
 
 *Prévoir 1 à 2 semaines de marge autour des fêtes de fin d'année.*
@@ -105,6 +106,7 @@ Hypothèses : **≈ 10 h/semaine**, démarrage **lundi 16/11/2026 (S1)**, fin **
 - [ ] L'agent s'interrompt pour validation humaine et reprend après approbation
 - [ ] Les traces apparaissent dans Langfuse avec coûts par appel
 - [ ] Aucun événement perdu ni effet en double après arrêt brutal et doublons injectés (LAB-18)
+- [ ] ADR-0005, 0006 et 0007 rédigés
 - [ ] Article #2 publié ; tag `v0.2.0`, dépôt rendu présentable (README, schéma)
 - [ ] **5 candidatures ciblées** envoyées en citant le dépôt (offres « Java + IA », « agentic coding »)
 
@@ -136,6 +138,7 @@ Hypothèses : **≈ 10 h/semaine**, démarrage **lundi 16/11/2026 (S1)**, fin **
 - [ ] Évaluation bloquante en CI (seuils) sur au moins un agent et le RAG
 - [ ] Quotas et coûts visibles par tenant
 - [ ] Certification obtenue et ajoutée au profil
+- [ ] ADR-0008 et 0009 rédigés
 - [ ] Tag `v0.5.0` ; **nouveau scan marché** (mise à jour de [docs/market.md](./docs/market.md))
 
 ---
@@ -165,6 +168,7 @@ Hypothèses : **≈ 10 h/semaine**, démarrage **lundi 16/11/2026 (S1)**, fin **
 - [ ] SSO (Keycloak) et isolation entre au moins deux tenants testées
 - [ ] Étude de cas legacy publiée (avant/après, mesures de gain)
 - [ ] CKAD obtenue
+- [ ] ADR-0010 rédigé ; **revue d'architecture** : relire les 10 ADR, corriger ceux que les tests ou les mesures ont contredits (noter l'écart, ne pas le cacher)
 - [ ] Documentation (site ou dossier `docs/`) ; tag `v1.0.0-beta`
 
 ---
@@ -222,6 +226,8 @@ Les numéros de chapitres ci-dessous viennent de la table des matières de la 2�
 **Priorités si le temps manque** : 1, 2, 5, 8, 9, 12, 13, 14 (≈ 340 pages sur ≈ 600). Les chapitres en italique ne se lisent que par sections.
 
 **Livrable de lecture** (dans le journal ou un article) : un schéma « garanties d'AgentGate » : ce que le système assure en cas de panne, de doublon, de désordre, et ce qu'il n'assure pas. À produire avec LAB-18.
+
+**Du livre à la vision d'architecte** : lire ne se voit pas, décider et justifier se voit. Chaque TP clé produit donc un [ADR](./docs/adr/README.md) (choix, alternatives, compromis, preuve). À M5, les 10 ADR et le schéma des garanties deviennent un article ou un talk « Compromis d'architecture d'une plateforme d'agents IA », et la matière des entretiens de conception pour les rôles d'architecte (TJM 610 € relevé dans [docs/market.md](./docs/market.md)).
 
 **Livrable de lecture** (dans le journal ou un article) : un schéma « garanties d'AgentGate » : ce que le système assure en cas de panne, de doublon, de désordre, et ce qu'il n'assure pas.
 

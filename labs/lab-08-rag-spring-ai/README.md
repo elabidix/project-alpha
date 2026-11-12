@@ -18,6 +18,7 @@ LAB-02, LAB-05. PostgreSQL avec l'extension pgvector (Docker).
 7. Documenter dans le README les résultats avant/après chaque amélioration.
 
 ## Critères d'acceptation
+- [ ] ADR-0005 rédigé (index vectoriel comme vue dérivée, recherche hybride) avec les scores d'évaluation comme preuve : [gabarit](../../docs/adr/README.md)
 - [ ] Chaque réponse cite ses sources ; une question hors corpus donne un refus explicite
 - [ ] Les scores d'évaluation sont publiés et reproductibles (`make eval` ou équivalent)
 - [ ] L'ingestion tolère un document corrompu sans bloquer les autres
