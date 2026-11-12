@@ -29,5 +29,6 @@ LAB-06 à LAB-13 (images Docker disponibles). Docker, `kubectl`, `kind`, `helm`.
 Déploiement GitOps (Argo CD ou Flux) sur kind.
 
 ## Ressources
+- DDIA : ch. 6 Réplication, ch. 9 pannes partielles, ch. 10 *Coordination Services* (en survol), pour la haute disponibilité de PostgreSQL et de l'état des agents
 - Kubernetes : <https://kubernetes.io/docs/> · kind : <https://kind.sigs.k8s.io/> · Helm : <https://helm.sh/docs/>
 - CKAD : <https://training.linuxfoundation.org/certification/certified-kubernetes-application-developer-ckad/> · simulateur <https://killer.sh>

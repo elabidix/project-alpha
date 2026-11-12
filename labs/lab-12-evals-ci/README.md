@@ -27,6 +27,7 @@ LAB-08, LAB-09, LAB-10.
 Tableau de bord de l'évolution des scores par version d'AgentGate.
 
 ## Ressources
+- DDIA : ch. 13 *Trust, but Verify* (vérifier en continu plutôt que supposer la correction)
 - promptfoo : <https://www.promptfoo.dev/docs/intro> · DeepEval : <https://deepeval.com> · Ragas : <https://docs.ragas.io>
 - <https://hamel.dev/blog/posts/evals/>
 - GitHub Actions : <https://docs.github.com/actions>

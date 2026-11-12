@@ -27,4 +27,5 @@ LAB-06, LAB-08, LAB-09.
 Annotations humaines dans Langfuse alimentant le jeu d'évaluation ([LAB-12](../lab-12-evals-ci/README.md)).
 
 ## Ressources
+- DDIA : ch. 2 *Describing Performance* (percentiles, temps de réponse : pourquoi p95/p99 et pas la moyenne)
 - Langfuse : <https://langfuse.com/docs> · OpenTelemetry Java : <https://opentelemetry.io/docs/languages/java/>

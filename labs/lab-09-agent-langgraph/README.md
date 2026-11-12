@@ -28,7 +28,7 @@ LAB-04, LAB-06, LAB-08. Notions de graphes d'états.
 Deuxième agent (contrôle qualité) et coordination multi-agents ; protocole A2A en bonus.
 
 ## Ressources
-- DDIA : pannes, reprise sur incident, idempotence : une reprise ne doit pas exécuter deux fois une action sensible (clé d'idempotence par action)
+- DDIA : ch. 5 *Durable Execution and Workflows* (c'est le modèle derrière la persistance d'état et la reprise de LangGraph) ; ch. 8 *Exactly-Once Message Processing Revisited*. Une reprise ne doit pas exécuter deux fois une action sensible : clé d'idempotence par action
 - LangGraph : <https://langchain-ai.github.io/langgraph/> (concepts, persistance, human-in-the-loop)
 - MCP : <https://modelcontextprotocol.io>
 - Cours courts DeepLearning.AI sur les agents : <https://www.deeplearning.ai/short-courses/>

@@ -206,18 +206,22 @@ Hypothèses : **≈ 10 h/semaine**, démarrage **lundi 16/11/2026 (S1)**, fin **
 
 **Verdict : oui, utile**, surtout pour les rôles architecte/tech lead et les entretiens de conception. Le livre ne parle pas d'IA : il donne les fondations (transactions, flux d'événements, données dérivées, évolution de schéma, pannes) sur lesquelles reposent des agents et du RAG fiables. C'est ce qui vous distingue d'un profil « démo ».
 
-À vérifier sur votre exemplaire : je n'ai pas pu consulter la table des matières de la 2ᵉ édition (le site officiel affiche encore la 1ʳᵉ). Le tableau ci-dessous suit donc les thèmes, pas les numéros de chapitres.
+Les numéros de chapitres ci-dessous viennent de la table des matières de la 2ᵉ édition.
 
-**Rythme** : ≈ 1 h par semaine, prise sur les 2 h d'apprentissage. Lire avant le TP, puis noter dans le journal une idée appliquée.
+**Rythme** : ≈ 1 h par semaine, prise sur les 2 h d'apprentissage (≈ 45 h sur l'année pour les chapitres essentiels, ≈ 8 pages/h). Lire avant le TP, puis noter dans le journal une idée appliquée. Les chapitres « optionnels » ne se lisent que s'il reste du temps ou si une offre ou un entretien l'exige.
 
-| Quand | Thèmes à lire | Pourquoi dans ce projet |
+| Quand | Chapitres (essentiels en gras) | Pourquoi dans ce projet |
 |---|---|---|
-| M0-M1 | Fiabilité, scalabilité, maintenabilité ; modèles de données ; encodage et évolution des schémas | Contrats d'API et schémas d'outils MCP versionnés ([LAB-03](./labs/lab-03-mcp-server-java/README.md), [LAB-05](./labs/lab-05-control-plane/README.md)) |
-| M1 | Stockage et index ; transactions et niveaux d'isolation | Audit insertion seule, contraintes, isolation entre tenants ([LAB-05](./labs/lab-05-control-plane/README.md), [LAB-17](./labs/lab-17-multitenancy-sso/README.md)). Comprendre l'index pgvector comme un index parmi d'autres |
-| M2 | Flux d'événements, journaux, données dérivées, traitement par lots et en flux | Un index vectoriel est une *vue dérivée* à garder synchronisée ([LAB-08](./labs/lab-08-rag-spring-ai/README.md), [LAB-18](./labs/lab-18-reliable-events/README.md)) |
-| M3 | Pannes partielles, timeouts, nouvelles tentatives, idempotence | Passerelle, repli de modèles, actions d'agents rejouables ([LAB-06](./labs/lab-06-mcp-gateway/README.md), [LAB-09](./labs/lab-09-agent-langgraph/README.md), [LAB-13](./labs/lab-13-model-routing/README.md)) |
-| M4 | Réplication, partitionnement, cohérence et consensus | Haute disponibilité Kubernetes, état des agents, PostgreSQL en production ([LAB-14](./labs/lab-14-kubernetes-helm/README.md)) |
-| M5 | Cloud natif, séparation stockage/calcul, aspects légaux et éthiques des données (selon la table de votre édition) | Discours d'architecte, conformité (AI Act, RGPD) dans les offres et audits |
+| M0-M1 (S1-8) | **1** Compromis d'architecture (systèmes de référence vs dérivés, cloud natif, microservices) · **2** Exigences non fonctionnelles (percentiles, tolérance aux pannes) · **5** Encodage et évolution (Protobuf/Avro, REST/RPC, *Durable Execution and Workflows*, architectures événementielles) | Contrats d'API et schémas d'outils MCP versionnés ([LAB-03](./labs/lab-03-mcp-server-java/README.md), [LAB-05](./labs/lab-05-control-plane/README.md)) ; p95 des futurs tableaux de bord ([LAB-10](./labs/lab-10-observability/README.md)) |
+| M1-M2 (S6-12) | **8** Transactions (ACID, isolation, write skew, 2PC, *Exactly-Once Message Processing Revisited*) · **4** sections *B-Trees vs LSM*, *Full-Text Search*, *Vector Embeddings* · **3** section *Event Sourcing and CQRS* | Audit insertion seule, contraintes ([LAB-05](./labs/lab-05-control-plane/README.md)) ; comprendre l'index pgvector et la recherche hybride ([LAB-08](./labs/lab-08-rag-spring-ai/README.md)) ; journal d'audit comme journal d'événements |
+| M2 (S9-16) | **12** Traitement de flux (journaux, CDC, état et immuabilité, tolérance aux pannes) · **13** Philosophie des systèmes de flux (données dérivées, *Aiming for Correctness*) | Un index vectoriel est une *vue dérivée* à garder synchronisée ; outbox et CDC ([LAB-18](./labs/lab-18-reliable-events/README.md)) ; reprise d'un agent = exécution durable ([LAB-09](./labs/lab-09-agent-langgraph/README.md)) |
+| M3 (S17-24) | **9** Les problèmes des systèmes distribués (pannes partielles, timeouts, verrous et baux) · **13** sections *Trust, but Verify* et *Enforcing Constraints* · **14** Faire ce qui est juste | Timeouts, repli, nouvelles tentatives ([LAB-06](./labs/lab-06-mcp-gateway/README.md), [LAB-13](./labs/lab-13-model-routing/README.md)) ; « faire confiance mais vérifier » = évaluation continue ([LAB-12](./labs/lab-12-evals-ci/README.md)) ; biais, vie privée, responsabilité = garde-fous et note AI Act ([LAB-11](./labs/lab-11-guardrails/README.md)) |
+| M4 (S25-34) | **7** section *Sharding for Multitenancy* · *6* Réplication (survol : réplication asynchrone, retard de réplication) · *10* Cohérence et consensus (survol : *Coordination Services*) | Isolation par tenant ([LAB-17](./labs/lab-17-multitenancy-sso/README.md)) ; PostgreSQL et état des agents en haute disponibilité ([LAB-14](./labs/lab-14-kubernetes-helm/README.md)) |
+| M5+ (optionnel) | *3* Modèles de données (GraphQL, graphes) · *11* Traitement par lots (stockage objet, orchestration, usages ML) · *1* section *Data Systems, Law, and Society* | Entretiens d'architecte, offres d'audit, conformité (AI Act, RGPD) |
+
+**Priorités si le temps manque** : 1, 2, 5, 8, 9, 12, 13, 14 (≈ 340 pages sur ≈ 600). Les chapitres en italique ne se lisent que par sections.
+
+**Livrable de lecture** (dans le journal ou un article) : un schéma « garanties d'AgentGate » : ce que le système assure en cas de panne, de doublon, de désordre, et ce qu'il n'assure pas. À produire avec LAB-18.
 
 **Livrable de lecture** (dans le journal ou un article) : un schéma « garanties d'AgentGate » : ce que le système assure en cas de panne, de doublon, de désordre, et ce qu'il n'assure pas.
 

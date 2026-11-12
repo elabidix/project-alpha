@@ -6,7 +6,7 @@
 Rendre fiables les échanges d'événements d'AgentGate (audit, ingestion RAG, approbations). Vous appliquez ici les idées de *Designing Data-Intensive Applications* sur les systèmes dérivés, les flux d'événements et les garanties de livraison. C'est ce qui sépare un senior d'un développeur qui « branche Kafka ».
 
 ## Prérequis
-LAB-05, LAB-08 (Kafka et ingestion asynchrone). Lecture conseillée : les chapitres de DDIA sur les transactions, les flux d'événements et les données dérivées (voir [ROADMAP.md](../../ROADMAP.md), section Lecture).
+LAB-05, LAB-08 (Kafka et ingestion asynchrone). Lecture conseillée avant le TP : DDIA ch. 8 (*Exactly-Once Message Processing Revisited*), ch. 12 (*Change Data Capture*, *State, Streams, and Immutability*), ch. 13 (*Aiming for Correctness*). Plan complet dans [ROADMAP.md](../../ROADMAP.md).
 
 ## Étapes
 1. **Reproduire le bug** : le plan de contrôle écrit un `AuditEvent` en base puis publie sur Kafka. Provoquer un arrêt brutal entre les deux et constater l'incohérence (écriture double non atomique).
@@ -30,7 +30,7 @@ LAB-05, LAB-08 (Kafka et ingestion asynchrone). Lecture conseillée : les chapit
 Appliquer la même idée aux outils des agents ([LAB-09](../lab-09-agent-langgraph/README.md)) : clé d'idempotence sur chaque action sensible pour qu'une reprise ou une nouvelle tentative ne l'exécute pas deux fois.
 
 ## Ressources
-- Designing Data-Intensive Applications (Kleppmann, Riccomini), thèmes transactions, flux d'événements, données dérivées, évolution des schémas
+- Designing Data-Intensive Applications (Kleppmann, Riccomini) : ch. 5 (Avro, évolution des schémas, architectures événementielles), ch. 8, ch. 12, ch. 13
 - Pattern outbox : <https://microservices.io/patterns/data/transactional-outbox.html>
 - Debezium : <https://debezium.io/documentation/>
 - Spring for Apache Kafka : <https://docs.spring.io/spring-kafka/reference/>

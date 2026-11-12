@@ -28,7 +28,7 @@ LAB-03, LAB-04. Connaissances Spring Security et JPA.
 Événements de domaine publiés sur Kafka pour l'audit asynchrone ([LAB-08](../lab-08-rag-spring-ai/README.md)).
 
 ## Ressources
-- DDIA : transactions et niveaux d'isolation, évolution des schémas (voir [ROADMAP.md](../../ROADMAP.md), section Lecture)
+- DDIA : ch. 8 Transactions (isolation, write skew), ch. 5 Encodage et évolution, ch. 3 *Event Sourcing and CQRS* (journal d'audit) ; plan de lecture dans [ROADMAP.md](../../ROADMAP.md)
 - Hexagonal : <https://alistair.cockburn.us/hexagonal-architecture/> · ArchUnit : <https://www.archunit.org>
 - Spring Authorization Server : <https://docs.spring.io/spring-authorization-server/reference/>
 - Testcontainers : <https://testcontainers.com/guides/>

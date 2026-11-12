@@ -28,6 +28,7 @@ LAB-04, LAB-06, LAB-09.
 Test de « RAG poisoning » : un document piégé dans le corpus du [LAB-08](../lab-08-rag-spring-ai/README.md).
 
 ## Ressources
+- DDIA : ch. 14 *Doing the Right Thing* (biais, responsabilité, vie privée) et ch. 1 *Data Systems, Law, and Society*, pour le modèle de menaces et la note de conformité
 - OWASP LLM Top 10 : <https://genai.owasp.org/llm-top-10/>
 - Presidio : <https://microsoft.github.io/presidio/> · promptfoo (red teaming) : <https://www.promptfoo.dev/docs/intro>
 - AI Act : <https://artificialintelligenceact.eu>

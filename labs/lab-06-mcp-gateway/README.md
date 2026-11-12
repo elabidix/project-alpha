@@ -28,6 +28,6 @@ LAB-03 à LAB-05.
 Corrélation de bout en bout avec OpenTelemetry ([LAB-10](../lab-10-observability/README.md)).
 
 ## Ressources
-- DDIA : pannes partielles, timeouts, nouvelles tentatives, idempotence (voir [ROADMAP.md](../../ROADMAP.md), section Lecture)
+- DDIA : ch. 9 Les problèmes des systèmes distribués (pannes partielles, timeouts, nouvelles tentatives) ; ch. 5 *Dataflow Through Services: REST and RPC* ; plan de lecture dans [ROADMAP.md](../../ROADMAP.md)
 - Spring Cloud Gateway : <https://docs.spring.io/spring-cloud-gateway/reference/>
 - MCP : <https://modelcontextprotocol.io>
